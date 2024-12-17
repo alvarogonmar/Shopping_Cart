@@ -18,14 +18,14 @@ function App() {
                         <img class="img-fluid" src="./public/img/carrito.png" alt="imagen carrito" />
 
                         <div id="carrito" class="bg-white p-3">
-                            <p class="text-center">El carrito esta vacio</p>
+                            <p class="text-center">The cart is empty</p>
                             <table class="w-100 table">
                                 <thead>
                                     <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Amount</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -65,8 +65,8 @@ function App() {
                                 </tbody>
                             </table>
 
-                            <p class="text-end">Total pagar: <span class="fw-bold">$899</span></p>
-                            <button class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
+                            <p class="text-end">Total pay: <span class="fw-bold">$899</span></p>
+                            <button class="btn btn-dark w-100 mt-3 p-2">Empty Cart</button>
                         </div>
                     </div>
                 </nav>
@@ -75,7 +75,7 @@ function App() {
     </header>
 
     <main class="container-xl mt-5">
-        <h2 class="text-center">Nuestra Colección</h2>
+        <h2 class="text-center">Our Collection</h2>
 
         <div class="row mt-5">
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -89,7 +89,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100"
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -104,7 +104,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -134,7 +134,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -149,7 +149,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -164,7 +164,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
 
@@ -179,7 +179,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -193,7 +193,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -207,7 +207,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -221,7 +221,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -235,7 +235,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -249,7 +249,7 @@ function App() {
                     <button 
                         type="button"
                         class="btn btn-dark w-100 "
-                    >Agregar al Carrito</button>
+                    >Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -258,7 +258,7 @@ function App() {
 
     <footer class="bg-dark mt-5 py-5">
         <div class="container-xl">
-            <p class="text-white text-center fs-4 mt-4 m-md-0">GuitarLA - Todos los derechos Reservados</p>
+            <p class="text-white text-center fs-4 mt-4 m-md-0">GuitarLA - All rights reserved</p>
         </div>
     </footer>
     </>
