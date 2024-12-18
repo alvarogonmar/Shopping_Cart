@@ -1,6 +1,10 @@
 export default function Guitar({guitar}){
 
     const {id, name, image, description, price} = guitar
+
+    const handleClick = () => {
+        console.log("Click...", guitar)
+    }
     return (
         <div className="col-md-6 col-lg-4 my-4 row align-items-center">
                 <div className="col-4">
@@ -13,6 +17,7 @@ export default function Guitar({guitar}){
                     <button 
                         type="button"
                         className="btn btn-dark w-100"
+                        onClick={()=> handleClick(guitar)} // Usar arrow function porque tienes: argumentos, y funciones que toman parametros
                     >Add to Cart</button>
                 </div>
             </div>
