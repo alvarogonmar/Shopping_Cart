@@ -15,10 +15,15 @@ function App() {
             <h2 className="text-center">Our Collection</h2>
 
             <div className="row mt-5">
-                {data.map(() => ( /**  AQUI se manda llamar el elemento de nuestra
+                {data.map((guitar) => ( /**  AQUI se manda llamar el elemento de nuestra
                 base de datos, cada elemento se mostrara, sea la cantidd que sea y se escribe
                 entre llaves porque es codigo de JavaScript */
-                    <Guitar />
+                    <Guitar
+                        key={guitar.id} // Prop especial que siempre debes usar cuando iteres en una lista y pasarle un valor unico (ej image, name, id)
+
+                        // Props - Permiten pasar informacion, crear componentes reutilizables
+                        guitar={guitar} // nombreProp = {valor}
+                    />
                 ))}
 
             </div>
