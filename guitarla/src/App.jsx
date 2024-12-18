@@ -1,14 +1,11 @@
 import { useState } from "react"
 import Guitar from "./components/Guitar"
 import Header from "./components/Header" // Importar el componente
+import { db } from "./data/db"
 
 function App() {
 
-    // State
-    const [auth, setAuth] = useState(false)
-    const [total, setTotal] = useState(0)
-    const [cart, setCart] = useState([])
-  
+    const [data, setData] = useState(db)
         return (
         <>
         
@@ -18,6 +15,17 @@ function App() {
             <h2 className="text-center">Our Collection</h2>
 
             <div className="row mt-5">
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
+                <Guitar />
                 <Guitar />
             </div>
         </main>
