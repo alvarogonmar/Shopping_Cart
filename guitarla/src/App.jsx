@@ -6,7 +6,14 @@ import { db } from "./data/db"
 function App() {
 
     const [data, setData] = useState(db)
-        return (
+    const [cart, setCart] = useState([])
+
+    function addToCart(item){
+        setCart(prevCart => [...prevCart, item])   
+    }
+        
+    
+    return (
         <>
          
         <Header />
@@ -23,6 +30,9 @@ function App() {
 
                         // Props - Permiten pasar informacion, crear componentes reutilizables
                         guitar={guitar} // nombreProp = {valor}
+                        cart={cart}
+                        setCart={setCart}
+                        addToCart={addToCart}
                     />
                 ))}
 
