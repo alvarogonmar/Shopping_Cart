@@ -8,25 +8,19 @@ function App() {
     const [data, setData] = useState(db)
         return (
         <>
-        
+         
         <Header />
         
-        <main className="container-xl mt-5">
+        <main className="container-xl mt-5"> 
             <h2 className="text-center">Our Collection</h2>
 
             <div className="row mt-5">
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
+                {data.map(() => ( /**  AQUI se manda llamar el elemento de nuestra
+                base de datos, cada elemento se mostrara, sea la cantidd que sea y se escribe
+                entre llaves porque es codigo de JavaScript */
+                    <Guitar />
+                ))}
+
             </div>
         </main>
 
