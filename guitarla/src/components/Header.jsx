@@ -6,7 +6,7 @@ import { useMemo } from "react"
 // Opcion 2: import React from 'react' - pero debera ir <React.Fragment>
 // Opcion 3: <>
 
-export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity}) { // Exportarlo para poderlo importar en otros componentes
+export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart}) { // Exportarlo para poderlo importar en otros componentes
 // State o Funciones
 
     // State Derivado
@@ -93,7 +93,11 @@ export default function Header({cart, removeFromCart, increaseQuantity, decrease
                                         
 
                                         <p className="text-end">Total to pay: <span className="fw-bold">${cartTotal}</span></p>
-                                        <button className="btn btn-dark w-100 mt-3 p-2">Empty Cart</button>
+                                        <button 
+                                            className="btn btn-dark w-100 mt-3 p-2"
+                                            onClick={clearCart}
+                                        >Empty Cart
+                                        </button>
                                     </>
                                     )}
                                     {}
