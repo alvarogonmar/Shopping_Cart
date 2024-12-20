@@ -1,6 +1,5 @@
 // Espacio para importar librerias
-import { use } from "react"
-import { useMemo } from "react"
+
 
 // Opcion 1: import {Fragment} from 'react'
 // Opcion 2: import React from 'react' - pero debera ir <React.Fragment>
@@ -9,9 +8,6 @@ import { useMemo } from "react"
 export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart}) { // Exportarlo para poderlo importar en otros componentes
 // State o Funciones
 
-    // State Derivado
-    const isEmpty = useMemo( () => cart.length === 0, [cart])
-    const cartTotal = useMemo ( () => cart.reduce((total, item ) => total + (item.quantity * item.price), 0))
 
     // Siempre lleva un return
     // HTML/Vista

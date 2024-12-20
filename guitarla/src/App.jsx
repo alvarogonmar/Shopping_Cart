@@ -1,73 +1,10 @@
-import { useState, useEffect } from "react"
 import Guitar from "./components/Guitar"
 import Header from "./components/Header" // Importar el componente
-import { db } from "./data/db"
 import { useCart } from "./hooks/useCart"
 
 function App() {
 
-    useCart()
-    
-    const initialCart = () => {
-        const localStorageCart = localStorage.getItem('cart')
-        return localStorageCart ? JSON.parse(localStorageCart) : []
-    }
-    const [data] = useState(db)
-    const [cart, setCart] = useState(initialCart)
-
-    const MAX_ITEMS = 10
-
-    useEffect (() => {
-        localStorage.setItem('cart', JSON.stringify(cart))
-    }, [cart])
-
-    function addToCart(item){
-        // Agregar items al carrito
-        const itemExists = cart.findIndex(guitar => guitar.id === item.id)
-        if(itemExists >= 0){ // existe en el carrito
-            if(cart[itemExists].quantity >= MAX_ITEMS) return
-            const updatedCart = [...cart]
-            updatedCart[itemExists].quantity++
-            setCart(updatedCart)
-        } else{
-            item.quantity = 1
-            setCart([...cart, item])   
-        }
-    }
-    
-    function removeFromCart(id){
-        setCart(prevCart => prevCart.filter(guitar => guitar.id !== id)) // Filtrar y "traer" las guitarras diferente a la del id que estoy quitando
-    }
-
-    function increaseQuantity(id) {
-        const updatedCart = cart.map( item => {
-            if(item.id === id && item.quantity < MAX_ITEMS) {
-                return {
-                    ...item,
-                    quantity: item.quantity + 1
-                }
-            }
-            return item
-        })
-        setCart(updatedCart)
-    }
-
-    function decreaseQuantity(id){
-        const updatedCart = cart.map( item => {
-            if(item.id === id && item.quantity > 1 && item.quantity <= MAX_ITEMS){
-                return {
-                    ...item,
-                    quantity: item.quantity - 1
-                }
-            }
-            return item
-        })
-        setCart(updatedCart)
-    }
-
-    function clearCart (e) {
-        setCart([])
-    }
+    const {data, cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, clearCart, isEmpty, cartTotal} = useCart()
     
     return (
         <>
@@ -93,7 +30,6 @@ function App() {
 
                         // Props - Permiten pasar informacion, crear componentes reutilizables
                         guitar={guitar} // nombreProp = {valor}
-                        setCart={setCart}
                         addToCart={addToCart}
                     />
                 ))}
