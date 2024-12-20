@@ -27,9 +27,11 @@ export default function Header({cart}) { // Exportarlo para poderlo importar en 
                                 className="carrito"
                             >
                                 <img className="img-fluid" src="./public/img/carrito.png" alt="imagen carrito" />
-
                                 <div id="carrito" className="bg-white p-3">
-                                    <p className="text-center">The cart is empty</p>
+
+                                    {cart.length === 0 ? (
+                                        <p className="text-center">The cart is empty</p>
+                                    ) : (
                                     <table className="w-100 table">
                                         <thead>
                                             <tr>
@@ -80,9 +82,11 @@ export default function Header({cart}) { // Exportarlo para poderlo importar en 
                                             ))}
                                         </tbody>
                                     </table>
+                                    )}
 
                                     <p className="text-end">Total pay: <span className="fw-bold">$899</span></p>
                                     <button className="btn btn-dark w-100 mt-3 p-2">Empty Cart</button>
+                                    {}
                                 </div>
                             </div>
                         </nav>
