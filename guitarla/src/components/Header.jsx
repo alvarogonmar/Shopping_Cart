@@ -8,6 +8,8 @@
 export default function Header({cart}) { // Exportarlo para poderlo importar en otros componentes
 // State o Funciones
 
+    // State Derivado
+    const isEmpty = () => cart.length === 0
 
     // Siempre lleva un return
     // HTML/Vista
@@ -29,7 +31,7 @@ export default function Header({cart}) { // Exportarlo para poderlo importar en 
                                 <img className="img-fluid" src="./public/img/carrito.png" alt="imagen carrito" />
                                 <div id="carrito" className="bg-white p-3">
 
-                                    {cart.length === 0 ? (
+                                    {isEmpty() ? (
                                         <p className="text-center">The cart is empty</p>
                                     ) : (
                                     <table className="w-100 table">
