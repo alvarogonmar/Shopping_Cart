@@ -20,14 +20,18 @@ function App() {
             setCart([...cart, item])   
         }
     }
-        
+    
+    function removeFromCart(id){
+        setCart(prevCart => prevCart.filter(guitar => guitar.id !== id)) // Filtrar y "traer" las guitarras diferente a la del id que estoy quitando
+    }
     
     return (
         <>
          
         <Header 
             cart={cart}
-            
+            removeFromCart={removeFromCart}
+
         />
         
         <main className="container-xl mt-5"> 
