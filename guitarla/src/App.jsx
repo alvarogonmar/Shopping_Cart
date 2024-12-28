@@ -15,6 +15,8 @@ function App() {
             increaseQuantity={increaseQuantity}
             decreaseQuantity={decreaseQuantity}
             clearCart={clearCart}
+            isEmpty={isEmpty}
+            cartTotal={cartTotal}
 
         />
         

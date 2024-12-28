@@ -5,12 +5,12 @@
 // Opcion 2: import React from 'react' - pero debera ir <React.Fragment>
 // Opcion 3: <>
 
-export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart}) { // Exportarlo para poderlo importar en otros componentes
+export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal}) { // Exportarlo para poderlo importar en otros componentes
 // State o Funciones
 
 
     // Siempre lleva un return
-    // HTML/Vista
+    // HTML/Vistaien
     return ( // Lo que esta en el return es lo que se muestra en pantalla y solo puedo retornar un solo elemento
         // los puedes juntar todos en <Fragment>
         // o simplemente poner <> 
